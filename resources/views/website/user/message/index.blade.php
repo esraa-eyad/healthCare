@@ -34,7 +34,6 @@
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                             <tr>
-                                <th scope="col">{{ __('ID') }}</th>
 
                                 <th scope="col">{{ __('Name Hospital') }}</th>
 
@@ -54,7 +53,6 @@
                                 <tbody>
 
                                 <tr>
-                                    <td>{{$messages->id}}</td>
 
                                     <td>{{$messages->hospitals->nameOfHospital}}</td>
                                     <td>{{$messages->created_at->format('d M, Y')}}</td>

@@ -39,10 +39,14 @@
                             </thead>
 
                                 <tbody>
+                                <?php $i = 0 ?>
+
                                 @if($posts->count() > 0)
                                     @foreach ($posts as $post)
+                                        <?php $i++ ?>
+
                                         <tr>
-                                            <td>{{ $post->id }}</td>
+                                            <td>{{ $i}}</td>
                                             <td>
                                                 @if($post->image)
                                                     <img height="50" class="card-img-top"  src="{{ $post->image}}"

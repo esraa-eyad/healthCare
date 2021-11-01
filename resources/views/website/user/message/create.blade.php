@@ -35,7 +35,8 @@
                         @foreach($hospitals as $hospital)
                             <option value=" {{ $hospital->id }} ">{{ $hospital->nameOfHospital }}</option>
                         @endforeach
-                    </select>                </div>
+                    </select>
+                </div>
 
                 <div class="col-12 py-2 wow fadeInUp">
                     <label for="message">Message</label>

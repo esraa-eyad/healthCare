@@ -5,7 +5,7 @@
     <div class="hero-section">
         <div class="container text-center wow zoomIn">
             <span class="subhead">Let's make your life happier</span>
-            <h1 class="display-4">Healthy Care</h1>
+            <h1 class="display-4">Automatic Vaccine Distribution System</h1>
         </div>
     </div>
 </div>
@@ -47,7 +47,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 py-3 wow fadeInUp">
-                    <h1>Welcome to Your Health <br> Care</h1>
+                    <h1>Automatic Vaccine Distribution System <br> System</h1>
                     <p class="text-grey mb-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Accusantium aperiam earum ipsa eius, inventore nemo labore eaque porro consequatur ex aspernatur. Explicabo, excepturi accusantium! Placeat voluptates esse ut optio facilis!</p>
                     <a href="{{ route('about') }}" class="btn btn-primary">Learn More</a>
                 </div>
@@ -96,7 +96,7 @@
             @endforeach
 
             <div class="col-12 text-center mt-4 wow zoomIn">
-                <a href="{{ route('news') }}" class="btn btn-primary">Read More</a>
+                <a href="{{ route('news') }}" class="btn btn-primary">Read Moree</a>
             </div>
 
         </div>
@@ -105,21 +105,6 @@
 </div> <!-- .page-section -->
 
 
-<div class="page-section banner-home bg-image" style="background-image: url({{ asset('website') }}/assets/img/banner-pattern.svg);">
-    <div class="container py-5 py-lg-0">
-        <div class="row align-items-center">
-            <div class="col-lg-4 wow zoomIn">
-                <div class="img-banner d-none d-lg-block">
-                    <img src="{{ asset('website') }}/assets/img/mobile_app.png" alt="">
-                </div>
-            </div>
-            <div class="col-lg-8 wow fadeInRight">
-                <h1 class="font-weight-normal mb-3">Get easy access of all features using One Health Application</h1>
-                <a href="#"><img src="{{ asset('website') }}/assets/img/google_play.svg" alt=""></a>
-                <a href="#" class="ml-2"><img src="{{ asset('website') }}/assets/img/app_store.svg" alt=""></a>
-            </div>
-        </div>
-    </div>
-</div> <!-- .banner-home -->
+
 
 @include('website.footer')

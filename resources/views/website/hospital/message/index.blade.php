@@ -46,13 +46,14 @@
                             </tr>
 
                             </thead>
-
+                            <?php $i = 0 ?>
                             @foreach($messages as $messages)
+                                <?php $i++ ?>
 
                                 <tbody>
 
                                 <tr>
-                                    <td>{{$messages->id}}</td>
+                                    <td>{{ $i}}</td>
 
                                     <td>
                                         @if($messages->replay==null)
