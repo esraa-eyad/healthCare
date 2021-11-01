@@ -70,6 +70,14 @@
                                 <p>Question</p>
                             </a>
                         </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('admin.profile') }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Update Profile</p>
+                            </a>
+                        </li>
+
                     </ul>
                 </li>
 
