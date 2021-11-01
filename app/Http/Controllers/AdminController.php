@@ -26,6 +26,7 @@ class AdminController extends Controller
 
     public function __construct()
     {
+        //can not access here expect admin
         $this->middleware('auth:admin');
     }
     public function index()
@@ -47,24 +48,34 @@ class AdminController extends Controller
         )->groupBy('day')->get();
 
 
-
+// show active hospital
         $best_hospital = Appointments::query()
             ->join('hospitals', 'hospitals.id', '=', 'appointments.hospital_id')
             ->selectRaw('hospitals.*, COUNT(appointments.hospital_id) AS more')
             ->groupBy(['appointments.hospital_id']) // should group by primary key
             ->orderByDesc('more')
-            ->take(5) // 20 best-selling products
+            ->take(5) //
             ->get();
 
 
-
+//show the more vaccine requried
         $most_vaccine = DB::table('vaccines')->join('appointments', 'vaccines.id', 'appointments.vaccine_id')
             ->selectRaw('vaccines.*, COUNT(appointments.vaccine_id) AS more')
             ->groupBy(['vaccines.id']) // should group by primary key
             ->orderByDesc('more')
-            ->take(5) // 20 best-selling products
+            ->take(5) //
+            ->get();
+      //  dd($most_vaccine);
+        //show the more vaccine requried
+        $most = DB::table('vaccines')->join('appointments', 'vaccines.id', 'appointments.vaccine_id')
+            ->selectRaw('vaccines.*, COUNT(appointments.vaccine_id) AS more')
+            ->where('appointments.takeVaccine','=','1')
+
+            ->groupBy(['vaccines.id']) // should group by primary key
+            ->take(5) //
             ->get();
 
+//show active hospital in post
         $posts = DB::table('posts')->join('hospitals', 'posts.hospital_id', 'hospitals.id')
             ->selectRaw('hospitals.*, COUNT(posts.hospital_id) AS more')
             ->groupBy(['hospitals.id']) // should group by primary key
@@ -75,7 +86,7 @@ class AdminController extends Controller
 
 
 
-        return view('admin',compact('count_User','count_Appointments','count_hospital','count_post','appointments_data','best_hospital','most_vaccine','posts'));
+        return view('admin',compact('count_User','count_Appointments','count_hospital','count_post','appointments_data','best_hospital','most_vaccine','posts','most'));
 
     }
 
@@ -198,20 +209,21 @@ class AdminController extends Controller
     }
     public function showAllHospitals()
     {
-        $hospitals=Hospital::orderBy('created_at', 'desc')->paginate(5);
+        //get all hospital order by created date
+        $hospitals=Hospital::orderBy('created_at', 'desc')->paginate(10);
 
+        // get all Appointments and realtions
        $appointments = Appointments::with(['hospitals', 'appointments_schedules'])->get();
         $hospital_vaccine = Vaccine::with(['hospitals'])->get();
 
            // dd($hospital_vaccine);
        return view('admin.hospitals.hospitals', compact(['hospitals','appointments','hospital_vaccine']));
 
-
     }
 
     public function showAllPosts()
     {
-
+//get all posts and realtion with hospital order by created data
         $posts = Post::with(['hospital'])->orderBy('created_at', 'desc')->paginate(8);
 
       //    dd($posts);
