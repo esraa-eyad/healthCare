@@ -49,9 +49,13 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    <?php $i = 0 ?>
+
                                     @foreach($posts as $data)
+                                        <?php $i++ ?>
+
                                         <tr>
-                                            <td>{{$data->id}}</td>
+                                            <td>{{ $i}}</td>
                                             <td>{{$data->title}}</td>
 
                                             <td>{{$data->hospital->nameOfHospital}}</td>

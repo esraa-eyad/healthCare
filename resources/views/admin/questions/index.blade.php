@@ -69,12 +69,15 @@
                                     </thead>
 
                                     <tbody>
+                                    <?php $i = 0 ?>
+
+                                    @if ( $qes->count() > 0)
 
                                     @foreach ($qes as $qes)
+                                        <?php $i++ ?>
 
                                         <tr>
-                                            <td>{{$qes->id}}</td>
-
+                                            <td>{{ $i}}</td>
                                             <td>{{$qes->question}}</td>
                                             <td>{{$qes->question_type}}</td>
 
@@ -92,7 +95,10 @@
 
 
                                         </tr>
+
+
                                     @endforeach
+                                    @endif
 
                                     </tbody>
 

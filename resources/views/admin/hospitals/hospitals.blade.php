@@ -46,9 +46,13 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    <?php $i = 0 ?>
+
                                     @foreach($hospitals as $data)
+                                        <?php $i++ ?>
+
                                         <tr>
-                                            <td>{{$data->id}}</td>
+                                            <td>{{ $i}}</td>
                                             <td>{{$data->nameOfHospital}}</td>
                                             <td>{{$data->mobile}}</td>
 
@@ -97,9 +101,13 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    <?php $i = 0 ?>
+
                                     @foreach($hospitals as $data)
+                                        <?php $i++ ?>
+
                                         <tr>
-                                            <td>{{$data->id}}</td>
+                                            <td>{{ $i}}</td>
                                             <td>{{$data->nameOfHospital}}</td>
 
                                             <td>
