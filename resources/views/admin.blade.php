@@ -41,7 +41,6 @@
                                 <div class="icon">
                                     <i class="ion ion-bag"></i>
                                 </div>
-                                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <!-- ./col -->
@@ -56,7 +55,6 @@
                                 <div class="icon">
                                     <i class="ion ion-stats-bars"></i>
                                 </div>
-                                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <!-- ./col -->
@@ -71,7 +69,6 @@
                                 <div class="icon">
                                     <i class="ion ion-person-add"></i>
                                 </div>
-                                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <!-- ./col -->
@@ -86,7 +83,6 @@
                                 <div class="icon">
                                     <i class="ion ion-pie-graph"></i>
                                 </div>
-                                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <!-- ./col -->
@@ -125,7 +121,7 @@
                             <div class="card">
                                 <div class="card-header border-0">
                                     <div class="d-flex justify-content-between">
-                                        <h3 class="card-title">The More Vaccine required</h3>
+                                        <h3 class="card-title">The More Vaccine is required</h3>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -147,7 +143,7 @@
                             <div class="card">
                                 <div class="card-header border-0">
                                     <div class="d-flex justify-content-between">
-                                        <h3 class="card-title"></h3>
+                                        <h3 class="card-title">the most day have appoinments</h3>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -165,7 +161,7 @@
                             <div class="card">
                                 <div class="card-header border-0">
                                     <div class="d-flex justify-content-between">
-                                        <h3 class="card-title">The More Post</h3>
+                                        <h3 class="card-title">The Most Hospital have posts</h3>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -188,7 +184,7 @@
                             <div class="card">
                                 <div class="card-header border-0">
                                     <div class="d-flex justify-content-between">
-                                        <h3 class="card-title">The most vaccine take it</h3>
+                                        <h3 class="card-title">The most vaccine is taken</h3>
                                     </div>
                                 </div>
                                 <div class="card-body">
